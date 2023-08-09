@@ -1,0 +1,12 @@
+<tonic-router id="page1" path="/:lang">
+  <app-header></app-header>
+  <header class="Hero make-flex">
+    <h1>Évoluer</h1>
+    <p>Anecdotes from the book “97 Things Every Programmer Should Know”</p>
+  </header>
+  <cards-enum class="MainContainer"></cards-enum>
+</tonic-router>
+<tonic-router id="page2" path="/:lang/:number">
+  <app-header></app-header>
+  <page-content class="PageContent"></page-content>
+</tonic-router>
