@@ -12,8 +12,11 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
     "@socketsupply/components": "^14.0.2",
     "@socketsupply/tonic": "^15.1.1",
+    "gray-matter": "^4.0.3",
+    "marked": "^7.0.2",
     "vite-plugin-markdown": "^2.1.0"
   }
 }

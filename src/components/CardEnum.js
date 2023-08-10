@@ -1,8 +1,9 @@
-import mdReader from "../data/util/mdReader";
+import { getTitleList } from "../util/mdReader";
 
 export default async function CardsEnum() {
   const cardTitles = [];
-  const files = await mdReader(window.location.pathname.split("/")[1]);
+  const files = await getTitleList(window.location.pathname.split("/")[1]);
+
   files.forEach((file) => {
     cardTitles.push(
       this
