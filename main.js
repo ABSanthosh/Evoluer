@@ -19,11 +19,14 @@ window.onload = () => {
   }
 };
 
-const routerHtml = await import("./router.html?raw");
-function Router() {
-  return this.html(routerHtml.default);
-}
-Tonic.add(Router, "app-router");
+(async () => {
+  const routerHtml = await import("./router.html?raw");
+  function Router() {
+    return this.html(routerHtml.default);
+  }
+  Tonic.add(Router, "app-router");
+})();
+
 Tonic.add(Header, "app-header");
 
 Tonic.add(PageContent, "page-content");

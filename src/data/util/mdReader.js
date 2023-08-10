@@ -15,11 +15,9 @@ function langSwitcher(lang) {
 
 export default async function mdReader(lang) {
   let files = langSwitcher(lang);
-  console.log(files);
-
   return Promise.all(
     Object.keys(files).map(async (key) => {
-      const html = await import(key);
+      const html = await files[key]();
 
       return {
         path: key.replace("data/", "").replace(".md", ""),
